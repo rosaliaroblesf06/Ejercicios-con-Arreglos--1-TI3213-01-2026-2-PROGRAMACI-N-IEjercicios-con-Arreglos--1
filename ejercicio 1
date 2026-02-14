@@ -1,0 +1,25 @@
+#Ejercicio 1) Leer 10 enteros, almacenarlos en un arreglo y determinar en qué posición del arreglo está el mayor número leído.
+using System;
+
+int[] numeros = new int[10];
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Ingrese número " + (i + 1) + ": ");
+    numeros[i] = int.Parse(Console.ReadLine());
+}
+
+int mayor = numeros[0];
+int posicion = 0;
+
+for (int i = 1; i < 10; i++)
+{
+    if (numeros[i] > mayor)
+    {
+        mayor = numeros[i];
+        posicion = i;
+    }
+}
+
+Console.WriteLine("El mayor es: " + mayor);
+Console.WriteLine("Está en la posición: " + posicion);
