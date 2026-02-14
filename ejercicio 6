@@ -1,0 +1,20 @@
+#Ejercicio 6)  Leer 10 números enteros, almacenarlos en un arreglo y determinar en qué posiciones se encuentran los números con más de 3 dígitos
+using System;
+
+int[] numeros = new int[10];
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Ingrese número " + (i + 1) + ": ");
+    numeros[i] = int.Parse(Console.ReadLine());
+}
+
+Console.WriteLine("Posiciones con más de 3 dígitos:");
+
+for (int i = 0; i < 10; i++)
+{
+    if (Math.Abs(numeros[i]) > 999)
+    {
+        Console.WriteLine("Posición: " + i);
+    }
+}
