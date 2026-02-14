@@ -1,0 +1,18 @@
+#Ejercicio 8)   Leer 10 números enteros, almacenarlos en un arreglo y determinar cuántos números negativos hay.
+using System;
+
+int[] numeros = new int[10];
+int negativos = 0;
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Ingrese número " + (i + 1) + ": ");
+    numeros[i] = int.Parse(Console.ReadLine());
+
+    if (numeros[i] < 0)
+    {
+        negativos++;
+    }
+}
+
+Console.WriteLine("Cantidad de números negativos: " + negativos);
