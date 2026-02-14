@@ -1,0 +1,16 @@
+#Ejercicio 7)  Leer 10 números enteros, almacenarlos en un arreglo y determinar a cuánto es igual el promedio entero de los datos del arreglo
+using System;
+
+int[] numeros = new int[10];
+int suma = 0;
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Write("Ingrese número " + (i + 1) + ": ");
+    numeros[i] = int.Parse(Console.ReadLine());
+    suma += numeros[i];
+}
+
+int promedio = suma / 10;
+
+Console.WriteLine("Promedio entero: " + promedio);
